@@ -1,0 +1,1482 @@
+:root {
+  font-family: Manrope, sans-serif;
+  color: hsl(207 55% 14%);
+  background: hsl(70 18% 96%);
+  font-synthesis: none
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit
+}
+
+button {
+  cursor: pointer
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .32
+}
+
+a {
+  color: inherit
+}
+
+.wrap {
+  max-width: 1450px;
+  margin: auto;
+  padding: clamp(1rem, 3vw, 3rem)
+}
+
+.top {
+  background: #232f5d;
+  color: white
+}
+
+.top .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem
+}
+
+.brand img {
+  width: 6rem
+}
+
+.brand strong {
+  font-family: 'Space Grotesk';
+  font-size: clamp(1rem, 2vw, 1.5rem)
+}
+
+.brand small {
+  display: block;
+  color: hsl(80 30% 75%)
+}
+
+.top button {
+  border: 1px solid #ffffff40;
+  background: transparent;
+  color: white;
+  padding: .65rem 1rem;
+  border-radius: 1rem 0 1rem 0
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin: 1.5rem 0
+}
+
+.eyebrow {
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: hsl(84 49% 37%)
+}
+
+h1 {
+  font: 700 clamp(2rem, 4vw, 3.6rem)/1.05 'Space Grotesk';
+  margin: .45rem 0
+}
+
+h1 em {
+  font-style: normal;
+  color: hsl(87 54% 40%)
+}
+
+p {
+  color: hsl(205 17% 43%)
+}
+
+.primary {
+  background: hsl(80 73% 58%);
+  border: 0;
+  color: hsl(207 62% 13%);
+  font-weight: 800;
+  padding: 1rem 1.4rem;
+  border-radius: 1.25rem 0 1.25rem 0
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem
+}
+
+.stat {
+  background: white;
+  border: 1px solid hsl(205 20% 89%);
+  padding: 1.5rem;
+  border-radius: 1.5rem 0 1.5rem 0
+}
+
+.stat span {
+  display: block;
+  color: hsl(204 14% 45%);
+  font-size: .85rem;
+  font-weight: 700
+}
+
+.stat strong {
+  display: block;
+  font: 700 clamp(1.7rem, 3vw, 2.8rem) 'Space Grotesk';
+  margin-top: .3rem
+}
+
+.panel {
+  background: white;
+  border: 1px solid hsl(205 20% 89%);
+  border-radius: 1.8rem 0 1.8rem 0;
+  padding: clamp(1rem, 2.3vw, 2rem);
+  margin-top: 1.4rem;
+  box-shadow: 0 18px 45px #1230470a
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(12rem, 2fr) repeat(3, minmax(9rem, 1fr));
+  gap: .9rem;
+  align-items: end
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  min-width: 0
+}
+
+.field label {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  font-weight: 800;
+  color: hsl(205 20% 39%)
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid hsl(205 20% 80%);
+  background: hsl(80 20% 98%);
+  color: hsl(207 55% 14%);
+  border-radius: .9rem 0 .9rem 0;
+  padding: .85rem 1rem;
+  outline-offset: 2px
+}
+
+.field select {
+  appearance: none;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23122c3c" stroke-width="2"%3E%3Cpath d="m6 9 6 6 6-6"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.6rem
+}
+
+.field.stock select {
+  background-color: hsl(80 45% 94%)
+}
+
+.field.active select {
+  background-color: hsl(203 45% 95%)
+}
+
+.tablehead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.8rem 0 .8rem;
+  gap: 1rem
+}
+
+.tablehead h2 {
+  margin: 0;
+  font: 700 1.4rem 'Space Grotesk'
+}
+
+.tablewrap {
+  overflow: auto;
+  border: 1px solid hsl(205 20% 90%);
+  border-radius: 1rem 0 1rem 0
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 890px
+}
+
+th {
+  text-align: left;
+  background: hsl(205 30% 96%);
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 1rem;
+  color: hsl(205 25% 37%)
+}
+
+td {
+  padding: .85rem 1rem;
+  border-top: 1px solid hsl(205 20% 92%);
+  font-size: .86rem
+}
+
+tbody tr:hover {
+  background: hsl(80 35% 98%)
+}
+
+.prod {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-weight: 800
+}
+
+.prod img {
+  width: 3.4rem;
+  height: 2.9rem;
+  object-fit: contain;
+  border-radius: .5rem;
+  background: hsl(205 20% 94%)
+}
+
+.pill {
+  display: inline-block;
+  border-radius: 1rem;
+  padding: .4rem .65rem;
+  font-size: .72rem;
+  font-weight: 800;
+  white-space: nowrap
+}
+
+.on,
+.yes {
+  background: hsl(92 52% 88%);
+  color: hsl(109 52% 25%)
+}
+
+.off,
+.no {
+  background: hsl(0 0% 92%);
+  color: hsl(0 0% 43%)
+}
+
+.note,
+.edit {
+  border: 1px solid hsl(205 18% 80%);
+  background: white;
+  border-radius: .6rem 0 .6rem 0;
+  padding: .45rem .65rem;
+  color: hsl(207 55% 14%);
+  font-weight: 700
+}
+
+.note:disabled {
+  opacity: .24
+}
+
+.actions {
+  white-space: nowrap
+}
+
+.muted {
+  color: hsl(205 18% 49%)
+}
+
+dialog {
+  border: 0;
+  padding: 0;
+  border-radius: 1.8rem 0 1.8rem 0;
+  max-width: min(680px, calc(100vw - 1.5rem));
+  width: 100%;
+  box-shadow: 0 25px 90px #091f3470
+}
+
+dialog::backdrop {
+  background: #061b2c9e;
+  backdrop-filter: blur(4px)
+}
+
+.modal {
+  padding: clamp(1.1rem, 3vw, 2.2rem);
+  max-height: 88vh;
+  overflow: auto
+}
+
+.modal header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem
+}
+
+.modal h2 {
+  font: 700 1.8rem 'Space Grotesk';
+  margin: 0 0 1rem
+}
+
+.close {
+  border: 0;
+  background: transparent;
+  font-size: 1.6rem
+}
+
+.formgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem
+}
+
+.wide {
+  grid-column: 1/-1
+}
+
+.preview {
+  display: flex;
+  gap: 1rem;
+  align-items: center
+}
+
+.preview img {
+  width: 7rem;
+  height: 5.3rem;
+  object-fit: contain;
+  background: hsl(205 20% 94%);
+  border-radius: .8rem
+}
+
+.buttons {
+  display: flex;
+  justify-content: end;
+  gap: .7rem;
+  margin-top: 1.5rem
+}
+
+.secondary {
+  border: 1px solid hsl(205 18% 75%);
+  background: white;
+  border-radius: .9rem 0 .9rem 0;
+  padding: .8rem 1.2rem
+}
+
+.alert {
+  color: hsl(0 65% 35%);
+  font-size: .85rem;
+  min-height: 1.3rem
+}
+
+.login {
+  max-width: 440px;
+  margin: 12vh auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1.5rem 0 1.5rem 0
+}
+
+.login h1 {
+  font-size: 2rem
+}
+
+.loading {
+  text-align: center;
+  padding: 5rem
+}
+
+.tip {
+  font-size: .8rem
+}
+
+.notes {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere
+}
+
+.hide {
+  display: none !important
+}
+
+@media(max-width:850px) {
+  .filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .intro {
+    align-items: start
+  }
+
+  .stats {
+    gap: .5rem
+  }
+
+  .stat {
+    padding: 1rem
+  }
+}
+
+@media(max-width:560px) {
+
+  .filters,
+  .formgrid {
+    grid-template-columns: 1fr
+  }
+
+  .wide {
+    grid-column: auto
+  }
+
+  .intro {
+    flex-direction: column
+  }
+
+  .top .wrap {
+    padding: .8rem 1rem
+  }
+
+  .brand img {
+    width: 4rem
+  }
+
+  .brand small {
+    font-size: .68rem
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .stat {
+    padding: .75rem
+  }
+
+  .stat span {
+    font-size: .68rem
+  }
+
+  .panel {
+    padding: .9rem
+  }
+
+  .preview {
+    flex-wrap: wrap
+  }
+}
+
+@media(prefers-reduced-motion:no-preference) {
+  button {
+    transition: transform .18s, background .18s
+  }
+
+  button:not(:disabled):hover {
+    transform: translateY(-2px)
+  }
+}
+
+/* Gestión de usuarios · v1.5 */
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  flex-wrap: wrap
+}
+
+.top-actions span {
+  font-size: .82rem;
+  font-weight: 800;
+  color: hsl(80 73% 70%)
+}
+
+.users-panel {
+  margin-top: 0
+}
+
+.users-panel .tablehead {
+  margin-top: 0
+}
+
+.user-table {
+  min-width: 760px
+}
+
+.security-form {
+  display: grid;
+  gap: .9rem
+}
+
+.security-form .formgrid {
+  gap: 1rem
+}
+
+.security-form .field {
+  margin-bottom: .3rem
+}
+
+@media(max-width:700px) {
+  .top-actions {
+    justify-content: flex-end
+  }
+
+  .top-actions span {
+    width: 100%;
+    text-align: right
+  }
+
+  .top-actions button {
+    padding: .55rem .65rem;
+    font-size: .75rem
+  }
+
+  .brand {
+    gap: .5rem
+  }
+
+  .brand img {
+    width: 3.6rem
+  }
+}
+
+/* UCO 1.6 · acceso, navegación y avatares */
+.login {
+  width: calc(100% - 2rem);
+  margin: clamp(3rem, 10vh, 7rem) auto;
+  padding: clamp(1.7rem, 4vw, 2.8rem);
+  text-align: center;
+  box-shadow: 0 24px 65px hsl(207 55% 14% / .09);
+  border: 1px solid hsl(205 20% 89%)
+}
+
+.login>img {
+  display: block;
+  width: clamp(6rem, 23vw, 8rem);
+  height: auto;
+  margin: 0 auto 1.4rem
+}
+
+.login h1 {
+  margin: .3rem 0 .7rem;
+  font-size: clamp(1.7rem, 4vw, 2.2rem)
+}
+
+.login>p {
+  margin: .2rem auto 1.8rem;
+  max-width: 21rem;
+  line-height: 1.55
+}
+
+.login form {
+  display: grid;
+  gap: 1rem;
+  text-align: left
+}
+
+.login .field {
+  gap: .5rem
+}
+
+.login .field input {
+  min-height: 3.2rem;
+  padding: .85rem 1rem
+}
+
+.login form>.primary {
+  width: 100%;
+  min-height: 3.3rem;
+  text-align: center;
+  font-size: 1rem
+}
+
+.login .alert {
+  margin: 0;
+  min-height: 0;
+  text-align: center
+}
+
+.login .alert:empty {
+  display: none
+}
+
+.top-actions {
+  gap: .8rem
+}
+
+.top-actions .user-identity {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  margin-right: .65rem;
+  color: hsl(80 73% 70%);
+  font-size: .82rem;
+  font-weight: 800;
+  white-space: nowrap
+}
+
+.top-actions #users-nav {
+  background: hsl(80 73% 58%);
+  color: hsl(207 62% 13%);
+  border-color: transparent;
+  font-weight: 800
+}
+
+.top-actions #users-nav:hover {
+  background: hsl(80 82% 66%)
+}
+
+.avatar-mini {
+  width: 2.15rem;
+  height: 2.15rem;
+  object-fit: cover;
+  border-radius: .7rem 0 .7rem 0;
+  background: hsl(80 20% 96%);
+  flex-shrink: 0
+}
+
+.avatar-mini[hidden] {
+  display: none
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  white-space: nowrap
+}
+
+.avatar-upload {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: .1rem 0 1.3rem
+}
+
+.avatar-upload .field {
+  flex: 1
+}
+
+.avatar-frame {
+  width: 5.4rem;
+  height: 5.4rem;
+  flex: none;
+  border: 2px solid hsl(207 62% 13%);
+  border-radius: 1.5rem 0 1.5rem 0;
+  background: hsl(80 20% 96%);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: .3rem
+}
+
+.avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 1.1rem 0 1.1rem 0
+}
+
+.avatar-frame img[src*="usuarios/"] {
+  object-fit: cover
+}
+
+@media(max-width:700px) {
+  .top-actions .user-identity {
+    margin-right: .3rem
+  }
+
+  .top-actions .user-identity span {
+    width: auto;
+    text-align: left
+  }
+
+  .top-actions {
+    gap: .5rem
+  }
+}
+
+@media(max-width:450px) {
+  .avatar-upload {
+    align-items: flex-start;
+    gap: .75rem
+  }
+
+  .avatar-frame {
+    width: 4.5rem;
+    height: 4.5rem
+  }
+
+  .login {
+    margin: 2rem auto
+  }
+}
+
+/* v1.8 · Menú táctil y panel adaptable */
+#users-nav[hidden] {
+  display: none !important
+}
+
+.menu-toggle {
+  display: none
+}
+
+.top .wrap {
+  position: relative
+}
+
+.top-actions {
+  min-width: 0
+}
+
+@media(max-width:1050px) {
+  .top .wrap {
+    min-height: 5.2rem
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .33rem;
+    width: 3.3rem;
+    height: 3.3rem;
+    flex: none;
+    border: 1px solid hsl(80 73% 58% / .6) !important;
+    border-radius: 1rem 0 1rem 0 !important;
+    background: hsl(207 45% 19%) !important;
+    z-index: 12
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: hsl(80 73% 70%);
+    border-radius: 2px;
+    transition: transform .2s, opacity .2s
+  }
+
+  .menu-toggle[aria-expanded=true] span:first-child {
+    transform: translateY(7px) rotate(45deg)
+  }
+
+  .menu-toggle[aria-expanded=true] span:nth-child(2) {
+    opacity: 0
+  }
+
+  .menu-toggle[aria-expanded=true] span:last-child {
+    transform: translateY(-7px) rotate(-45deg)
+  }
+
+  .top-actions {
+    display: none;
+    position: absolute;
+    z-index: 11;
+    top: calc(100% - .15rem);
+    left: 1rem;
+    right: 1rem;
+    background: hsl(207 62% 13%);
+    border: 1px solid hsl(80 73% 58% / .3);
+    border-radius: 0 0 1.2rem 1.2rem;
+    padding: 1rem;
+    box-shadow: 0 1.3rem 2rem #061a2d55;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .65rem
+  }
+
+  .top-actions.is-open {
+    display: flex
+  }
+
+  .top-actions .user-identity {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: .4rem .2rem .8rem;
+    border-bottom: 1px solid #ffffff30;
+    white-space: normal
+  }
+
+  .top-actions .user-identity span {
+    width: auto;
+    text-align: left
+  }
+
+  .top-actions button {
+    width: 100%;
+    text-align: center;
+    min-height: 3.1rem;
+    font-size: .95rem;
+    padding: .75rem 1rem
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch
+  }
+
+  .intro #new {
+    width: 100%;
+    min-height: 3.6rem;
+    text-align: center;
+    font-size: 1.05rem
+  }
+
+  .brand {
+    min-width: 0
+  }
+
+  .brand strong {
+    font-size: clamp(.95rem, 2vw, 1.3rem)
+  }
+}
+
+@media(min-width:1051px) {
+  .intro {
+    display: flex
+  }
+
+  .intro #new {
+    width: auto
+  }
+}
+
+@media(max-width:560px) {
+  .top .wrap {
+    gap: .4rem
+  }
+
+  .brand {
+    gap: .55rem
+  }
+
+  .brand img {
+    width: 3.8rem
+  }
+
+  .brand small {
+    font-size: .65rem
+  }
+
+  .intro {
+    gap: 1.2rem
+  }
+
+  .intro #new {
+    min-height: 3.8rem;
+    font-size: 1.12rem
+  }
+
+  .stats {
+    gap: .45rem
+  }
+
+  .stat {
+    min-width: 0
+  }
+
+  .stat span {
+    overflow-wrap: anywhere
+  }
+
+  .modal {
+    max-height: 90dvh
+  }
+
+  .buttons {
+    flex-wrap: wrap
+  }
+
+  .buttons button {
+    flex: 1 1 9rem
+  }
+
+  .tablewrap {
+    max-width: 100%
+  }
+}
+
+/* v1.8.1 · Ajustes aprobados */
+.avatar-mini.avatar-logo {
+  object-fit: contain;
+  padding: .18rem;
+  background: hsl(80 20% 96%)
+}
+
+.users-panel .users-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: .8rem;
+  margin: 0 0 1.4rem
+}
+
+.users-heading #close-users {
+  white-space: nowrap;
+  max-width: 100%;
+  font-size: clamp(.78rem, 2vw, .95rem)
+}
+
+.users-heading>div {
+  min-width: 0;
+  max-width: 100%
+}
+
+.users-heading .eyebrow {
+  display: block
+}
+
+.users-heading h2 {
+  margin: .45rem 0 0;
+  max-width: none;
+  line-height: 1.15;
+  white-space: nowrap;
+  font-size: clamp(1rem, 3.7vw, 1.4rem)
+}
+
+.users-panel>.buttons {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .7rem
+}
+
+.users-panel>.buttons button {
+  flex: 0 0 auto;
+  width: auto;
+  white-space: nowrap;
+  max-width: 100%;
+  padding: .8rem clamp(.7rem, 2.5vw, 1.2rem);
+  font-size: clamp(.76rem, 2vw, .95rem)
+}
+
+.password-dialog .security-form {
+  gap: 1rem
+}
+
+.password-dialog .security-form .field {
+  margin-bottom: 0
+}
+
+.password-dialog .security-form .buttons {
+  margin-top: .45rem
+}
+
+.password-dialog .security-form .alert:empty {
+  display: none
+}
+
+.password-dialog .security-form .alert:not(:empty) {
+  margin: .1rem 0
+}
+
+@media(min-width:1051px) {
+  .users-panel .users-heading {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left
+  }
+
+  .users-heading>div {
+    order: 0;
+    text-align: left
+  }
+
+  .users-heading #close-users {
+    order: 1;
+    flex: none
+  }
+
+  .users-heading h2 {
+    font-size: 1.4rem
+  }
+}
+
+@media(max-width:1050px) {
+  .top-actions .user-identity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: .6rem
+  }
+
+  .top-actions .user-identity span {
+    width: 100%;
+    text-align: center
+  }
+
+  .top-actions .user-identity img {
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 1rem 0 1rem 0
+  }
+}
+
+@media(max-width:560px) {
+  .users-panel>.buttons {
+    flex-wrap: nowrap;
+    gap: .45rem
+  }
+
+  .users-panel>.buttons button {
+    padding: .7rem .5rem;
+    font-size: clamp(.68rem, 3vw, .85rem)
+  }
+}
+/* Ajustes puntuales: edición de usuarios y acciones de tabla */
+dialog:has(.avatar-upload) .modal .buttons{margin-top:.65rem}
+dialog:has(.avatar-upload) .modal .alert:empty{display:none}
+.user-table th:last-child,.user-table td:last-child{white-space:nowrap;min-width:10.5rem}
+.user-table td:last-child button{display:inline-flex;align-items:center;justify-content:center;width:auto;min-width:max-content;white-space:nowrap;vertical-align:middle}
+.user-table td:last-child button+button{margin-left:.45rem}
+
+/* v1.9 · Administración comercial */
+.commercial-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin:1rem 0 1.5rem}.commercial-actions button{flex:0 1 auto}.commercial-table{min-width:780px}.commercial-row-actions{white-space:nowrap}.commercial-row-actions button+button{margin-left:.55rem}#commercial-content h3{font:700 1.2rem 'Space Grotesk',sans-serif;margin:1.8rem 0 .8rem}#commercial-content .tablewrap{margin-bottom:1.4rem}@media(max-width:700px){.commercial-actions button{flex:1 1 12rem}.commercial-row-actions button{width:auto!important;min-width:4.4rem;white-space:nowrap}}
+
+/* v1.9.3 · Fotografía de productos a sangre; logos y avatares conservan su encuadre. */
+.prod img,.preview img{display:block;object-fit:cover;object-position:center}
+
+/* v1.9.5 · Tarifas y promociones · interfaz administrativa adaptable */
+.commercial-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin:1.1rem 0 1.4rem}.commercial-actions button{white-space:nowrap}.commercial-actions .tariff-active{background:hsl(207 62% 13%);color:#fff;border-color:hsl(207 62% 13%)}
+.tariff-title{display:flex;align-items:start;justify-content:space-between;gap:1.2rem;margin:1.5rem 0}.tariff-title h3{font:700 clamp(1.4rem,3vw,2rem) 'Space Grotesk',sans-serif;margin:.35rem 0}.tariff-title p{margin:.35rem 0;line-height:1.5}.tariff-tabs{display:flex;gap:.4rem;border-bottom:1px solid hsl(205 20% 85%);overflow-x:auto;padding-bottom:.4rem;margin:1rem 0 1.3rem}.tariff-tabs button{border:1px solid transparent;background:transparent;padding:.85rem 1rem;border-radius:.85rem 0 .85rem 0;white-space:nowrap;font-weight:800;color:hsl(207 35% 35%)}.tariff-tabs button[aria-selected=true]{background:hsl(80 73% 58%);color:hsl(207 62% 13%)}.tariff-toolbar{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem}.tariff-toolbar .field{flex:1 1 16rem;max-width:32rem}.tariff-toolbar .field span{font-size:.75rem;font-weight:800;color:hsl(205 20% 39%);text-transform:uppercase}.tariff-table{min-width:680px}.tariff-table td:last-child,.tariff-table th:last-child{white-space:nowrap}.tariff-help{margin:1.4rem 0 0;line-height:1.65}.commercial-row-actions{white-space:nowrap}.commercial-row-actions button+button{margin-left:.35rem}.field[hidden]{display:none!important}
+@media(max-width:700px){.commercial-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.commercial-actions button{width:100%;white-space:normal;min-height:3rem;padding:.7rem .5rem}.tariff-title{flex-direction:column}.tariff-title>button{width:100%;min-height:3rem}.tariff-tabs button{font-size:.8rem;padding:.8rem .65rem}.tariff-toolbar{align-items:stretch}.tariff-toolbar .field{max-width:none}.tariff-toolbar .primary{width:100%}}
+@media(max-width:420px){.commercial-actions{grid-template-columns:1fr}}
+
+/* v1.9.6: light DOM Web Components comerciales */
+uco-commercial-content,uco-tariff-view:not([hidden]),uco-table-scroll{display:block}
+
+/* Web Components fase 3: conservar cajas y medidas de tablas y formularios */
+uco-product-table,uco-admin-user-table,uco-admin-dialog-content{display:block}
+uco-product-table{min-width:0}
+
+/* v1.9.6 · navegación temática y listas uniformes */
+.admin-section-nav{display:flex;gap:.75rem;margin:1.25rem auto 0;padding:0}.admin-section-nav button{flex:1;min-height:3.15rem;padding:.8rem 1rem;border:1px solid hsl(207 25% 78%);border-radius:.9rem 0 .9rem 0;background:#fff;color:hsl(207 62% 13%);font-weight:800;cursor:pointer}.admin-section-nav button.active{background:hsl(80 73% 58%);border-color:hsl(80 73% 58%)}.admin-section-nav button[hidden],#catalog-area[hidden],.commercial-actions[hidden]{display:none!important}
+.uco-pager-tools{display:flex;margin:.8rem 0;gap:.6rem}.uco-pager-tools input{width:min(100%,30rem);min-height:2.8rem;border:1px solid hsl(207 20% 75%);border-radius:.75rem 0 .75rem 0;padding:.65rem .9rem;background:#fff;color:hsl(207 62% 13%)}.uco-pager-controls{display:flex;align-items:center;justify-content:flex-end;gap:.7rem;flex-wrap:wrap;padding:.9rem 0}.uco-pager-controls span{margin-right:auto;font-size:.85rem;color:hsl(207 30% 40%)}.uco-pager-controls button{padding:.65rem 1rem;border:1px solid hsl(207 25% 75%);border-radius:.75rem 0 .75rem 0;background:#fff;color:hsl(207 62% 13%);font-weight:700;cursor:pointer}.uco-pager-controls button:disabled{opacity:.4;cursor:default}tr[hidden]{display:none!important}.tariff-table .prod{display:flex;align-items:center;gap:.7rem}.tariff-table .prod img{width:3.5rem;height:3.1rem;object-fit:cover;border-radius:.55rem 0 .55rem 0;flex:none}
+@media(max-width:700px){.admin-section-nav{display:grid;grid-template-columns:1fr;gap:.5rem}.admin-section-nav button{width:100%;border-radius:.8rem;min-height:3rem}.commercial-actions{grid-template-columns:1fr!important}.commercial-actions button,.users-panel>.buttons button{width:100%}.users-panel>.buttons{flex-direction:column;flex-wrap:wrap}.tariff-tabs{flex-direction:column;overflow:visible}.tariff-tabs button{width:100%;white-space:normal}.uco-pager-controls{justify-content:space-between}.uco-pager-controls span{width:100%}}
+
+#commercial-content[hidden],#tariff-view[hidden]{display:none!important}.commercial-table .prod{display:flex;align-items:center;gap:.6rem}.commercial-table .prod img{width:3.4rem;height:3rem;object-fit:cover;border-radius:.5rem 0 .5rem 0;flex:none}
+
+#tariffs-nav{display:none!important}
+
+/* v1.9.6 · Ajustes de navegación y distribución solicitados */
+.admin-section-nav{max-width:calc(100% - 3rem);margin:1rem auto .4rem;gap:.65rem}
+#commercial-area,#users-area{margin-top:.45rem}
+#commercial-area .commercial-heading{margin:0 0 1.3rem;text-align:center}
+#commercial-area .commercial-heading h2{font-size:clamp(1.55rem,2.8vw,2.25rem);white-space:normal}
+#commercial-area .commercial-heading .eyebrow{font-size:clamp(.78rem,1.2vw,.94rem)}
+.commercial-subnav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:0 0 1.65rem}
+.commercial-subnav button,.tariff-tabs button{width:100%;min-height:3.1rem;border:1px solid hsl(207 25% 78%);border-radius:.9rem 0 .9rem 0;background:#fff;color:hsl(207 62% 13%);font-weight:800;cursor:pointer;padding:.75rem 1rem}
+.commercial-subnav button:hover,.tariff-tabs button:hover{background:hsl(80 55% 94%)}
+.commercial-section-heading{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:2rem 0 .8rem;scroll-margin-top:6rem}
+#commercial-content .commercial-section-heading h3{margin:0;font-size:clamp(1.2rem,2vw,1.5rem)}
+.commercial-section-heading button{flex:none;min-height:3rem}
+.tariff-title{justify-content:center;text-align:center;margin:0 0 1.4rem}
+.tariff-title>div{width:100%}.tariff-title h3{font-size:clamp(1.65rem,3vw,2.35rem)}.tariff-title .eyebrow{font-size:clamp(.8rem,1.2vw,.95rem)}
+.tariff-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;overflow:visible;border:0;padding:0;margin:1rem 0 1.4rem}
+.tariff-tabs button[aria-selected=true]{border-color:hsl(80 73% 58%)}
+#users-area .users-heading{margin-bottom:1.4rem}
+.desktop-security{position:relative;display:flex;align-items:center}
+.desktop-security #security-desktop-admin{background:hsl(80 73% 58%);color:hsl(207 62% 13%);font-weight:800;border-color:hsl(80 73% 58%)}
+.security-dropdown{position:absolute;right:0;top:calc(100% + .4rem);z-index:30;min-width:13rem;background:white;border:1px solid hsl(207 25% 80%);border-radius:.8rem;padding:.45rem;box-shadow:0 .6rem 1.5rem hsl(207 30% 10% / .16)}
+.security-dropdown[hidden],#security-desktop-admin[hidden],#security-desktop-self[hidden],.commercial-heading[hidden],.commercial-subnav[hidden]{display:none!important}
+.security-dropdown button{display:block;width:100%;text-align:left;color:hsl(207 62% 13%);background:transparent;border:0;padding:.75rem;border-radius:.5rem;white-space:nowrap}
+.security-dropdown button:hover{background:hsl(80 55% 94%)}
+@media(min-width:701px){#admin-menu>#my-security,#admin-menu>#users-nav{display:none!important}}
+@media(max-width:700px){.admin-section-nav{max-width:calc(100% - 2rem);margin:.65rem auto .35rem;gap:.35rem}.desktop-security{display:none!important}.commercial-subnav,.tariff-tabs{grid-template-columns:1fr;gap:.45rem}.commercial-section-heading{display:flex;flex-direction:column;align-items:stretch;text-align:center;gap:.85rem;margin:1.65rem 0 1rem}.commercial-section-heading button{width:100%;min-height:3.1rem}.tariff-tabs button{font-size:.9rem}.commercial-heading h2{font-size:1.7rem}}
+
+/* v1.9.6 · Ajuste de pestañas comerciales y títulos */
+.admin-section-nav.wrap{box-sizing:border-box;max-width:1450px;width:100%;padding:clamp(1rem,3vw,3rem)!important;padding-bottom:0!important;margin:.15rem auto 0;gap:.65rem}
+#commercial-area.wrap{padding-top:.55rem}
+#commercial-area .commercial-heading{display:flex;justify-content:center;text-align:center;margin:0 0 1.05rem}
+#commercial-area .commercial-heading>div{width:100%;text-align:center}
+#commercial-area .commercial-subnav{margin:0 0 1.2rem}
+#commercial-area .commercial-subnav button[aria-selected="true"]{background:hsl(80 73% 58%);border-color:hsl(80 73% 58%)}
+#commercial-content>[hidden]{display:none!important}
+@media(max-width:700px){.admin-section-nav.wrap{padding:1rem 1rem 0!important;gap:.4rem}#commercial-area.wrap{padding-top:.4rem}#commercial-area .commercial-heading{margin-bottom:.9rem}#commercial-area .commercial-subnav{margin-bottom:1rem}}
+
+/* Confirmación de precios: coherente con los diálogos UCO */
+.price-confirm{display:grid;gap:.9rem;padding:clamp(1rem,2.5vw,1.35rem);border:1px solid hsl(77 55% 70%);background:hsl(75 55% 97%);border-radius:1.1rem 0 1.1rem 0;color:hsl(207 52% 17%)}
+.price-confirm-title{display:flex;align-items:center;gap:.7rem;font-weight:700;font-size:1.05rem}
+.price-confirm-title span{display:grid;place-items:center;flex:0 0 1.65rem;height:1.65rem;border-radius:50%;background:hsl(78 75% 54%);font-weight:800}
+.price-confirm p{margin:0;line-height:1.5;overflow-wrap:anywhere}
+.price-confirm-detail{font-size:.92rem;color:hsl(207 32% 35%)}
+.price-confirm-values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.price-confirm-values>div{min-width:0;display:grid;gap:.3rem;padding:.9rem;background:white;border:1px solid hsl(205 20% 85%);border-radius:.8rem 0 .8rem 0}
+.price-confirm-values small{color:hsl(205 22% 40%);font-size:.8rem}
+.price-confirm-values strong{font-size:clamp(1.15rem,3vw,1.55rem);overflow-wrap:anywhere}
+.price-confirm-actions{display:flex;gap:.7rem;flex-wrap:wrap}
+.price-confirm-actions button{flex:1 1 11rem;min-height:2.9rem;text-align:center;justify-content:center;white-space:normal}
+.security-form>.buttons[hidden]{display:none}
+@media(max-width:560px){dialog:has(.price-confirm){width:calc(100% - 1.5rem);max-width:calc(100vw - 1.5rem)}dialog:has(.price-confirm) .modal{padding:1.15rem;max-height:calc(100dvh - 2rem)}.price-confirm{padding:1rem;gap:.8rem}.price-confirm-values{gap:.5rem}.price-confirm-values>div{padding:.7rem}.price-confirm-actions{flex-direction:column}.price-confirm-actions button{width:100%;flex-basis:auto;min-height:3rem}}
+/* Confirmación unificada UCO · integrada en los diálogos existentes */
+uco-confirm-change{display:block;min-width:0}.uco-confirm-change{display:grid;gap:.85rem;margin:.85rem 0 0;padding:clamp(.9rem,2.5vw,1.3rem);background:hsl(76 45% 97%);border:1px solid hsl(78 54% 72%);border-radius:1.1rem 0 1.1rem 0;color:hsl(207 52% 17%);overflow-wrap:anywhere}.uco-confirm-heading{display:flex;align-items:center;gap:.65rem;font-size:1.05rem}.uco-confirm-heading span{display:grid;place-items:center;flex:0 0 1.7rem;height:1.7rem;border-radius:50%;background:hsl(78 75% 54%);font-weight:800}.uco-confirm-change p{margin:0;line-height:1.5}.uco-confirm-values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}.uco-confirm-values>div{display:grid;gap:.25rem;min-width:0;padding:.8rem;background:#fff;border:1px solid hsl(205 20% 85%);border-radius:.8rem 0 .8rem 0}.uco-confirm-values small{font-size:.78rem;color:hsl(205 22% 40%)}.uco-confirm-values strong{font-size:clamp(1rem,2.5vw,1.3rem);overflow-wrap:anywhere}.uco-confirm-actions{display:flex;gap:.7rem;flex-wrap:wrap}.uco-confirm-actions button{flex:1 1 11rem;min-height:2.9rem;white-space:normal;text-align:center}.uco-confirm-actions .danger-confirm{background:hsl(4 65% 40%);color:white}@media(max-width:560px){dialog:has(uco-confirm-change){width:calc(100% - 1.5rem);max-width:calc(100vw - 1.5rem)}dialog:has(uco-confirm-change) .modal{padding:clamp(.85rem,4vw,1.15rem);max-height:calc(100dvh - 1.5rem);overflow:auto}.uco-confirm-change{gap:.75rem;padding:.9rem}.uco-confirm-values{gap:.5rem}.uco-confirm-values>div{padding:.65rem}.uco-confirm-actions{flex-direction:column}.uco-confirm-actions button{width:100%;flex-basis:auto;min-height:3rem}}
+.uco-standalone-confirm{width:min(31rem,calc(100vw - 2rem));max-width:calc(100vw - 2rem);padding:clamp(.7rem,3vw,1.1rem);border:0;border-radius:1.1rem 0 1.1rem 0;box-shadow:0 1.5rem 4rem hsl(207 40% 10% / .3)}.uco-standalone-confirm::backdrop{background:hsl(207 35% 8% / .55)}.uco-standalone-confirm form{margin:0}
+
+/* Contorno blanco uniforme para las imágenes de usuario. */
+.avatar-mini{border:1px solid #fff;box-sizing:border-box}
+.avatar-mini.avatar-logo{background:transparent;padding:0}
+
+/* Configuración económica UCO */
+uco-economy-settings{display:block;width:100%;min-width:0}.uco-economy-panel{padding:clamp(1rem,2vw,1.5rem);color:#232f5d}.uco-economy-panel h3{margin:0 0 .4rem;font-size:1.35rem}.uco-economy-panel p{line-height:1.5}.uco-economy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.2rem}.uco-economy-grid form{display:flex;flex-direction:column;gap:.9rem;padding:1.15rem;background:#fff;border:1px solid #dce2ec;border-radius:1rem 0 1rem 0;min-width:0}.uco-economy-grid h4{margin:0;color:#232f5d}.uco-economy-grid label{display:grid;gap:.35rem;font-size:.84rem;font-weight:700}.uco-economy-grid input,.uco-economy-grid select{width:100%;min-width:0;box-sizing:border-box;border:1px solid #c9d2de;border-radius:.6rem;padding:.7rem;font:inherit}.uco-economy-grid button{border:0;border-radius:.7rem 0 .7rem 0;padding:.8rem;background:#232f5d;color:#fff;font-weight:800;cursor:pointer}.uco-economy-message{text-align:center;font-weight:800;color:#232f5d}@media(max-width:750px){.uco-economy-grid{grid-template-columns:1fr}}
+
+/* Pulido de administración: pestañas de tarifas y cabecera vinculada al panel. */
+@media(min-width:751px){
+ .tariff-tabs{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:.5rem!important;align-items:stretch!important;margin:.65rem 0 1.15rem!important;padding:0!important;overflow:visible!important}
+ .tariff-tabs button{min-width:0!important;width:100%!important;min-height:3rem!important;padding:.65rem .3rem!important;font-size:clamp(.77rem,1vw,.92rem)!important;line-height:1.25!important;white-space:normal!important;text-wrap:balance!important}
+ .tariff-title{margin:0 0 .55rem!important;padding:0!important;gap:.25rem!important}
+ .tariff-title h3{margin:.15rem 0!important}
+ .tariff-title p{margin:.15rem 0!important}
+}
+@media(max-width:750px){
+ .tariff-tabs{display:grid!important;grid-template-columns:1fr!important;gap:.45rem!important;margin:.6rem 0 1rem!important;overflow:visible!important;padding:0!important}
+ .tariff-tabs button{width:100%!important;min-width:0!important;min-height:2.9rem!important;padding:.65rem .7rem!important;white-space:normal!important;font-size:.88rem!important}
+ .tariff-title{margin:0 0 .55rem!important;padding:0!important;gap:.2rem!important;text-align:center!important}
+ .tariff-title h3{font-size:clamp(1.45rem,6vw,1.85rem)!important;line-height:1.15!important;margin:.15rem 0!important}
+ .tariff-title .eyebrow{font-size:.75rem!important;letter-spacing:.08em!important}
+ .tariff-title p{font-size:.85rem!important;line-height:1.4!important;margin:.15rem 0!important}
+}
+
+
+/* Ajuste específico de la cabecera de catálogo; no altera títulos de otras secciones. */
+#catalog-area>.intro{margin-top:clamp(.3rem,1vw,.7rem)!important;text-align:center!important;align-items:center!important;position:relative}
+#catalog-area>.intro>div{margin-inline:auto!important;text-align:center!important}
+#catalog-area>.intro .eyebrow{font-size:clamp(.9rem,1.2vw,1rem)!important}
+#catalog-area>.intro h1,#catalog-area>.intro p{text-align:center!important}
+@media(min-width:761px){#catalog-area>.intro #new{position:absolute;right:0;bottom:0}}
+@media(max-width:760px){#catalog-area>.intro{display:flex!important;flex-direction:column!important;gap:.7rem!important}#catalog-area>.intro #new{position:static!important;margin-inline:auto!important}}
+
+/* IVA: selección múltiple, estado permanente y confirmación corporativa */
+.uco-tax-multi{display:grid;gap:.45rem;min-width:0}.uco-tax-label{font-size:.84rem;font-weight:800}
+.uco-economy-grid .uco-tax-trigger{width:100%;text-align:left;background:#fff;color:#232f5d;border:1px solid #c9d2de;border-radius:.65rem;padding:.8rem;font:700 .85rem Manrope,sans-serif}
+.uco-tax-dropdown{border:1px solid #c9d2de;border-radius:.8rem 0 .8rem 0;padding:.65rem;background:#fff}
+.uco-tax-dropdown[hidden],.uco-tax-confirm[hidden]{display:none!important}
+.uco-tax-options{display:grid;gap:.12rem;max-height:14rem;overflow-y:auto;margin-top:.55rem;scrollbar-gutter:stable}
+.uco-economy-grid .uco-tax-option{display:flex;align-items:center;gap:.6rem;padding:.45rem .5rem;font-size:.8rem;cursor:pointer;border-radius:.45rem}
+.uco-tax-option:hover{background:hsl(79 65% 96%)}
+.uco-economy-grid .uco-tax-option input{width:1rem;height:1rem;flex:none;accent-color:#6f9f26}
+.uco-tax-option span{overflow-wrap:anywhere}
+.uco-tax-status{min-height:2.65rem;display:flex;align-items:center;justify-content:center;text-align:center;padding:.5rem .75rem;border:1px solid hsl(80 32% 78%/.5);border-radius:.7rem 0 .7rem 0;background:hsl(80 35% 96%/.5);color:hsl(205 16% 50%);opacity:.62;font-size:.78rem;font-weight:800;box-sizing:border-box}
+.uco-tax-status.pending{background:hsl(80 73% 91%);border-color:hsl(80 65% 54%);color:#355b14;opacity:1}
+.uco-tax-confirm{display:grid;gap:.65rem;padding:1rem;background:hsl(80 58% 96%);border:1px solid hsl(80 65% 65%);border-radius:1rem 0 1rem 0}
+.uco-tax-confirm h4{font-size:1rem}.uco-tax-confirm p{margin:0;font-size:.82rem}
+.uco-tax-confirm-list{max-height:12rem;overflow-y:auto;margin:0;padding-left:1.2rem;font-size:.8rem}
+.uco-tax-confirm-actions{display:flex;gap:.5rem}
+.uco-economy-grid .uco-tax-confirm-actions button{flex:1;min-width:0}
+.uco-economy-grid .uco-tax-confirm-actions button:first-child{background:#fff;color:#232f5d;border:1px solid #232f5d}
+@media(max-width:560px){.uco-tax-confirm-actions{flex-direction:column}}
+
+
+/* UCO · Pulido final de Impuestos y transporte (solo disposición visual).
+   No afecta a otras pestañas ni a la lógica de actualización del IVA. */
+#tariff-panel .uco-economy-panel{padding-bottom:clamp(.65rem,1.25vw,1rem)}
+#tariff-panel .uco-economy-grid{align-items:stretch;margin-top:1rem}
+#tariff-panel .uco-economy-grid>form{
+  height:100%;box-sizing:border-box;gap:.85rem;padding:1.05rem 1.15rem .95rem;
+}
+/* Ambos botones comparten la misma línea inferior aunque los campos difieran. */
+#tariff-panel #uco-shipping>button[type="submit"],
+#tariff-panel #uco-tax>button[type="submit"]{margin-top:auto;min-height:2.9rem;flex-shrink:0}
+/* El aviso ocupa espacio fijo y equilibra el lado del IVA. */
+#tariff-panel .uco-tax-status{min-height:3.25rem;padding:.6rem .8rem;line-height:1.4}
+/* Nota de prioridades: centrada y próxima a las dos cajas. */
+#tariff-view>.tariff-help{margin:.6rem auto 0;text-align:center;max-width:76rem;line-height:1.5}
+@media(max-width:750px){
+  #tariff-panel .uco-economy-panel{padding-bottom:.45rem}
+  #tariff-panel .uco-economy-grid{gap:.75rem;margin-top:.8rem}
+  #tariff-panel .uco-economy-grid>form{height:auto;gap:.7rem;padding:.95rem .9rem .8rem}
+  #tariff-panel .uco-economy-grid>form>button[type="submit"]{margin-top:.1rem}
+  #tariff-panel .uco-tax-status{min-height:2.9rem}
+  #tariff-view>.tariff-help{
+    margin:.35rem auto 0;padding:0 .35rem;text-align:center;
+    line-height:1.45;max-width:38rem;text-wrap:pretty;
+  }
+}
+
+/* Evitar viudas/huérfanas en la nota de tarifas.
+   La frase final baja completa si no cabe; en móvil fluye normalmente. */
+#tariff-view>.tariff-help{text-wrap:balance}
+#tariff-view>.tariff-help .uco-tariff-final-sentence{display:inline-block;white-space:nowrap}
+@media(max-width:750px){
+ #tariff-view>.tariff-help .uco-tariff-final-sentence{display:inline;white-space:normal}
+}
+
+/* UCO - Usuarios / Clientes, mismo lenguaje de panel y responsive */
+.uco-unified{margin:1rem 0 1.25rem;padding:clamp(1rem,2vw,1.65rem)}
+.uco-unified-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.uco-unified-head h2{color:#232f5d;margin:.2rem 0;font-size:clamp(1.35rem,2vw,1.8rem)}
+.uco-unified-head p{margin:.2rem 0 .8rem;color:#617087}
+.uco-unified-actions{display:flex;flex-wrap:wrap;gap:.55rem}
+.uco-unified-filters{display:grid;grid-template-columns:minmax(12rem,2fr) repeat(2,minmax(9rem,1fr));gap:.65rem;margin:1rem 0}
+.uco-unified-filters input,.uco-unified-filters select{width:100%;min-width:0}
+.uco-unified-list{display:grid;gap:.45rem}
+.uco-account-row{display:grid;grid-template-columns:3.4rem minmax(9rem,2fr) minmax(6rem,1fr) minmax(6rem,1fr) 5.5rem 5.5rem auto;align-items:center;gap:.7rem;padding:.65rem .75rem;background:#fff;border:1px solid #e4e8ed;border-radius:.8rem 0 .8rem 0;min-width:0}
+.uco-account-photo{width:3.25rem;height:3.25rem;object-fit:cover;border-radius:.7rem 0 .7rem 0;background:#edf2e7}
+.uco-account-details{min-width:0;display:flex;flex-direction:column;gap:.15rem}
+.uco-account-details strong,.uco-account-details small{overflow-wrap:anywhere}
+.uco-account-details strong{color:#232f5d}
+.uco-account-details small{font-size:.75rem;color:#617087}
+.uco-account-meta,.uco-account-count{font-size:.82rem;color:#344264}
+.uco-account-status{font-size:.78rem;font-weight:800;color:#7e4343}
+.uco-account-status.is-active{color:#5b8a21}
+.uco-account-actions{display:flex;gap:.35rem;flex-wrap:wrap}
+.uco-account-actions button{background:#232f5d;color:white;border:0;border-radius:.55rem 0 .55rem 0;padding:.55rem .75rem;font-weight:800;cursor:pointer}
+.uco-account-actions button:last-child:not(:first-child){background:#a9df39;color:#232f5d}
+.uco-history-dialog{max-width:min(95vw,55rem);width:100%;max-height:90dvh;overflow:auto}
+.uco-history-content{max-height:65dvh;overflow:auto}
+.uco-history-order{padding:.85rem;border:1px solid #dce4ec;border-radius:.6rem;margin:.5rem 0}
+.uco-history-order summary{cursor:pointer;color:#232f5d;font-weight:800;overflow-wrap:anywhere}
+.uco-history-order li{padding:.2rem 0}
+@media(max-width:1000px){.uco-account-row{grid-template-columns:3.4rem minmax(9rem,1fr) 7rem 5rem auto}.uco-account-row>.uco-account-meta:nth-of-type(2),.uco-account-count{display:none}}
+@media(max-width:720px){.uco-unified-head{flex-direction:column;align-items:stretch}.uco-unified-actions{justify-content:center}.uco-unified-filters{grid-template-columns:1fr 1fr}.uco-unified-filters input{grid-column:1/-1}.uco-account-row{grid-template-columns:3.4rem minmax(0,1fr) auto;gap:.5rem}.uco-account-row>.uco-account-meta,.uco-account-count{display:none}.uco-account-actions{grid-column:2/-1;justify-content:flex-start}.uco-account-status{grid-column:3;grid-row:1}.uco-account-details{grid-column:2;grid-row:1}}
+@media(max-width:420px){.uco-unified{padding:.8rem}.uco-unified-actions button{flex:1}.uco-account-row{padding:.5rem}.uco-account-photo{width:2.85rem;height:2.85rem}}
+
+.uco-unified[hidden]{display:none!important}
+
+/* La ficha consolidada sustituye visualmente el listado de clientes duplicado */
+#commercial-area:has(#uco-unified) #commercial-customers,
+#commercial-area:has(#uco-unified) #commercial-customers + .tablewrap{display:none!important}
+
+/* Historial: acceso a justificantes de pagos simulados aprobados */
+.uco-history-order .uco-history-pdf-button{display:inline-flex;align-items:center;justify-content:center;min-height:2.55rem;margin:.7rem 0 .3rem;padding:.6rem 1.15rem;background:#232f5d;color:#fff;border:0;border-radius:.75rem 0 .75rem 0;font:800 .9rem Manrope,sans-serif;cursor:pointer}
+.uco-history-order .uco-history-pdf-button:hover{background:#364577}
+.uco-history-order .uco-history-pdf-button:disabled{opacity:.6;cursor:wait}
+@media(max-width:48rem){.uco-history-order .uco-history-pdf-button{width:100%;min-height:3rem}}
+
+/* Visor de justificantes de administración: misma geometría y controles que el área cliente. */
+dialog.uco-receipt-dialog{box-sizing:border-box;position:fixed;inset:0;width:min(96vw,920px);max-width:96vw;height:min(94dvh,1050px);max-height:94dvh;margin:auto;padding:0;border:0;border-radius:1rem 0 1rem 0;box-shadow:0 2rem 5rem #06112777;overflow:hidden;background:white;color:#232f5d}
+dialog.uco-receipt-dialog[open]{display:flex;flex-direction:column}
+dialog.uco-receipt-dialog::backdrop{background:#061127b8}
+dialog.uco-receipt-dialog .uco-receipt-head{box-sizing:border-box;flex:0 0 auto;background:#232f5d;color:white;padding:.85rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap}
+dialog.uco-receipt-dialog .uco-receipt-head>strong{color:white;font-weight:800}
+dialog.uco-receipt-dialog .uco-receipt-head>div{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem}
+dialog.uco-receipt-dialog .uco-receipt-head button,dialog.uco-receipt-dialog .uco-receipt-head a{display:inline-flex;align-items:center;justify-content:center;background:#a9df39;color:#232f5d;border:0;border-radius:.55rem 0 .55rem 0;padding:.6rem .8rem;font:800 .8rem Manrope,sans-serif;text-decoration:none;cursor:pointer;min-height:2.5rem}
+dialog.uco-receipt-dialog iframe{display:block;width:100%;height:auto;flex:1 1 auto;min-height:0;border:0;background:#fff}
+dialog.uco-receipt-dialog .uco-receipt-fallback-note{padding:.6rem 1rem;margin:0;background:#fff4d9;color:#744619;font-weight:700;font-size:.78rem}
+/* Acción PDF alineada al extremo derecho, en verde corporativo. */
+.uco-history-order .uco-history-pdf-button{display:flex;align-items:center;justify-content:center;width:max-content;min-height:2.6rem;margin:.85rem 0 .25rem auto;padding:.65rem 1.25rem;background:#a9df39;color:#232f5d;border:0;border-radius:.75rem 0 .75rem 0;font:800 .9rem Manrope,sans-serif;cursor:pointer}
+.uco-history-order .uco-history-pdf-button:hover{background:#97cb29}
+.uco-history-order .uco-history-pdf-button:focus-visible{outline:2px solid #232f5d;outline-offset:2px}
+@media(max-width:48rem){dialog.uco-receipt-dialog{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;border-radius:0}dialog.uco-receipt-dialog .uco-receipt-head{justify-content:center;text-align:center}.uco-history-order .uco-history-pdf-button{width:auto;max-width:100%;margin-left:auto;margin-right:0;min-height:3rem}}
+
+/* Fase 1E: lectura de perfiles y vínculos, sin modificar los estilos base. */
+.uco-profile-link-label{display:block;color:#477a18;font-weight:700;margin-top:.2rem}
+.uco-profile-details{display:grid;grid-template-columns:minmax(7rem,35%) 1fr;gap:.55rem 1rem;margin:1rem 0}
+.uco-profile-details dt{font-weight:700;color:#232f5d}
+.uco-profile-details dd{margin:0;overflow-wrap:anywhere}
+.uco-profile-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.uco-profile-actions button{background:#a9df39;color:#232f5d;border:0;border-radius:.8rem 0 .8rem 0;padding:.75rem 1rem;font-weight:700;cursor:pointer}
+@media(max-width:35rem){.uco-profile-details{grid-template-columns:1fr;gap:.2rem}.uco-profile-details dd{margin-bottom:.65rem}}
+
+/* Fase 1E · refinamiento visual exclusivo de la ficha de perfil. */
+dialog.uco-profile-dialog{width:min(94vw,48rem);max-width:48rem;max-height:min(90dvh,52rem);border-radius:1.4rem 0 1.4rem 0;overflow:auto}
+dialog.uco-profile-dialog>.modal{padding:clamp(1.1rem,3vw,2rem)}
+dialog.uco-profile-dialog .modal>header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-bottom:1rem;margin-bottom:1.1rem;border-bottom:1px solid #e2e8ee}
+dialog.uco-profile-dialog .modal>header h2{font-size:clamp(1.2rem,2.4vw,1.65rem);color:#232f5d;margin:0}
+dialog.uco-profile-dialog .uco-profile-hero{display:flex;align-items:center;gap:1.3rem;background:#f4f7fa;border:1px solid #e4eaf0;border-radius:1rem 0 1rem 0;padding:1.2rem;margin-bottom:1.2rem}
+dialog.uco-profile-dialog .uco-profile-avatar{width:clamp(5.5rem,13vw,7.5rem);height:clamp(5.5rem,13vw,7.5rem);flex:none;object-fit:cover;border-radius:1rem 0 1rem 0;border:3px solid #fff;box-shadow:0 4px 15px #14244618}
+dialog.uco-profile-dialog .uco-profile-identity{min-width:0}
+dialog.uco-profile-dialog .uco-profile-eyebrow{font-size:.7rem;letter-spacing:.11em;color:#648329;font-weight:800}
+dialog.uco-profile-dialog .uco-profile-identity h3{font-size:clamp(1.25rem,3vw,1.8rem);line-height:1.2;color:#232f5d;margin:.25rem 0}
+dialog.uco-profile-dialog .uco-profile-identity p{margin:.2rem 0 .75rem;color:#62738b;overflow-wrap:anywhere}
+dialog.uco-profile-dialog .uco-profile-tags{display:flex;flex-wrap:wrap;gap:.45rem}
+dialog.uco-profile-dialog .uco-profile-tags span{padding:.28rem .65rem;border-radius:.55rem 0 .55rem 0;background:#e7edf5;color:#232f5d;font-size:.76rem;font-weight:800}
+dialog.uco-profile-dialog .uco-profile-tags .uco-profile-tag-active{background:#e6f6c5;color:#426c13}
+dialog.uco-profile-dialog .uco-profile-tags .uco-profile-tag-inactive{background:#fce9e9;color:#a02e2e}
+dialog.uco-profile-dialog .uco-profile-details{grid-template-columns:minmax(9rem,38%) minmax(0,1fr);gap:0;margin:0 0 1rem;border:1px solid #e5ebf0;border-radius:.85rem 0 .85rem 0;overflow:hidden}
+dialog.uco-profile-dialog .uco-profile-details dt,dialog.uco-profile-dialog .uco-profile-details dd{padding:.78rem 1rem;border-bottom:1px solid #e9edf1;font-size:.9rem;line-height:1.35}
+dialog.uco-profile-dialog .uco-profile-details dt{background:#f8fafc;color:#232f5d;font-weight:800}
+dialog.uco-profile-dialog .uco-profile-details dd{background:#fff;color:#39465c;min-width:0}
+dialog.uco-profile-dialog .uco-profile-details dt:nth-last-of-type(1),dialog.uco-profile-dialog .uco-profile-details dd:nth-last-of-type(1){border-bottom:0}
+dialog.uco-profile-dialog .uco-profile-actions{justify-content:flex-end;gap:.7rem;margin-top:1.2rem}
+dialog.uco-profile-dialog .uco-profile-actions button{min-height:2.8rem;padding:.75rem 1.2rem}
+dialog.uco-profile-dialog .uco-history-content>.tip{font-size:.79rem;line-height:1.5;color:#64758b;margin:.9rem 0}
+@media(max-width:48rem){dialog.uco-profile-dialog{width:min(96vw,40rem);max-width:96vw;max-height:94dvh}dialog.uco-profile-dialog>.modal{padding:1.15rem}}
+@media(max-width:35rem){dialog.uco-profile-dialog{width:calc(100vw - 1rem);max-width:calc(100vw - 1rem);max-height:96dvh;border-radius:1rem 0 1rem 0}dialog.uco-profile-dialog>.modal{padding:1rem}dialog.uco-profile-dialog .uco-profile-hero{gap:.85rem;padding:.85rem}dialog.uco-profile-dialog .uco-profile-avatar{width:4.5rem;height:4.5rem}dialog.uco-profile-dialog .uco-profile-identity h3{font-size:1.18rem}dialog.uco-profile-dialog .uco-profile-identity p{font-size:.8rem;margin-bottom:.45rem}dialog.uco-profile-dialog .uco-profile-details{grid-template-columns:minmax(0,1fr)}dialog.uco-profile-dialog .uco-profile-details dt{padding:.55rem .8rem .12rem;border:0}dialog.uco-profile-dialog .uco-profile-details dd{padding:.15rem .8rem .65rem;border-bottom:1px solid #e9edf1}dialog.uco-profile-dialog .uco-profile-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}dialog.uco-profile-dialog .uco-profile-actions button{padding:.7rem .35rem;font-size:.86rem}}
+
+/* Fase 1E — Vinculación comercial: diseño aislado, sin afectar otros diálogos */
+dialog.uco-link-dialog{width:min(94vw,39rem);max-width:94vw;max-height:92dvh;border-radius:1.15rem 0 1.15rem 0;overflow:hidden;background:#fff;color:#232f5d}
+dialog.uco-link-dialog>.modal{padding:clamp(1.1rem,3.5vw,2rem);max-height:92dvh;overflow-y:auto}
+dialog.uco-link-dialog .modal header{align-items:center;gap:1rem;padding-bottom:1rem;margin-bottom:1.2rem;border-bottom:1px solid #e5eaf0}
+dialog.uco-link-dialog .modal h2{font-size:clamp(1.3rem,3vw,1.75rem);line-height:1.2;margin:0;color:#232f5d}
+dialog.uco-link-dialog .modal .close{flex:none;display:grid;place-items:center;width:2.35rem;height:2.35rem;border-radius:.65rem 0 .65rem 0;background:#f0f4f8;color:#232f5d;font-size:1.35rem;cursor:pointer}
+dialog.uco-link-dialog .uco-history-content{max-height:none;overflow:visible}
+dialog.uco-link-dialog .uco-link-intro{margin:0 0 1.35rem;padding:1rem 1.1rem;border-left:4px solid #a9df39;border-radius:.65rem 0 .65rem 0;background:#f5f9ee;color:#52647c;font-size:.91rem;line-height:1.55;overflow-wrap:anywhere}
+dialog.uco-link-dialog .uco-link-form{display:grid;gap:1.15rem}
+dialog.uco-link-dialog .uco-link-field{display:grid;gap:.5rem;margin:0;color:#232f5d;font-size:.88rem;font-weight:750;line-height:1.4}
+dialog.uco-link-dialog .uco-link-field select,dialog.uco-link-dialog .uco-link-field input{display:block;box-sizing:border-box;width:100%;min-width:0;min-height:3rem;margin:0;padding:.75rem .9rem;border:1px solid #cbd5e1;border-radius:.65rem 0 .65rem 0;background:#fff;color:#232f5d;font:500 .94rem 'Manrope',sans-serif;outline-offset:2px}
+dialog.uco-link-dialog .uco-link-field select:focus-visible,dialog.uco-link-dialog .uco-link-field input:focus-visible{border-color:#6f9d21;outline:2px solid #a9df39}
+dialog.uco-link-dialog .uco-link-submit,dialog.uco-link-dialog .uco-link-unlink{display:block;box-sizing:border-box;width:100%;min-height:3rem;margin:.3rem 0 0;padding:.85rem 1rem;border:0;border-radius:.8rem 0 .8rem 0;font-weight:800;cursor:pointer}
+dialog.uco-link-dialog .uco-link-submit{background:#a9df39;color:#232f5d}
+dialog.uco-link-dialog .uco-link-submit:hover{background:#98cd2e}
+dialog.uco-link-dialog .uco-link-submit:disabled{opacity:.6;cursor:wait}
+dialog.uco-link-dialog .uco-link-current{margin:0;padding:1rem;background:#f6f8fb;border:1px solid #e4eaf1;border-radius:.75rem 0 .75rem 0;color:#232f5d;line-height:1.5;overflow-wrap:anywhere}
+dialog.uco-link-dialog .uco-link-unlink{background:#fbe9e9;color:#a32b35}
+@media(max-width:48rem){dialog.uco-link-dialog{width:min(95vw,35rem);max-height:94dvh}dialog.uco-link-dialog>.modal{padding:1.2rem}}
+@media(max-width:35rem){dialog.uco-link-dialog{width:calc(100vw - 1rem);max-width:calc(100vw - 1rem);max-height:96dvh;border-radius:1rem 0 1rem 0}dialog.uco-link-dialog>.modal{padding:1rem}dialog.uco-link-dialog .modal header{margin-bottom:.85rem}dialog.uco-link-dialog .uco-link-intro{padding:.85rem;font-size:.84rem;margin-bottom:1rem}dialog.uco-link-dialog .uco-link-form{gap:.9rem}dialog.uco-link-dialog .uco-link-field{font-size:.83rem}dialog.uco-link-dialog .uco-link-field select,dialog.uco-link-dialog .uco-link-field input{font-size:1rem}}
+
+/* Cuenta vinculada: botón compacto con contorno verde, sin alterar el estado sin vincular. */
+.uco-account-actions button.uco-link-active,.uco-account-actions button.uco-link-active:last-child:not(:first-child){background:transparent;color:#689e17;border:2px solid #a9df39;padding:calc(.55rem - 2px) calc(.75rem - 2px)}
+.uco-account-actions button.uco-link-active:hover,.uco-account-actions button.uco-link-active:focus-visible{background:#f3fae6;color:#4f8010}
+
+/* Misma anchura para Vincular y Vínculo; sin cambiar la apariencia ni las acciones. */
+.uco-account-actions button[data-unified-action="link"]{box-sizing:border-box;min-width:5.65rem;text-align:center;white-space:nowrap}
+
+/* Usuarios / Clientes: centrar el bloque de titulares solo en móvil y tableta pequeña. */
+@media (max-width:720px){
+ .uco-unified-head > :first-child{width:100%;text-align:center}
+ .uco-unified-head > :first-child h2,.uco-unified-head > :first-child p{text-align:center}
+}
+
+
+/* UCO Pedidos 2B — consulta responsive */
+.uco-orders{padding-bottom:3rem}.uco-orders-intro{margin:1.5rem 0}.uco-orders-intro h1{margin:.35rem 0;color:#232f5d}.uco-orders-intro p{color:#62748c}
+.uco-orders-filters{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.8rem;margin-bottom:1.2rem}.uco-orders-filters label{display:grid;gap:.35rem;font-weight:700;color:#232f5d;font-size:.85rem}.uco-orders-filters input,.uco-orders-filters select{min-width:0;width:100%;padding:.75rem;border:1px solid #d6dfeb;border-radius:.65rem;background:#fff;color:#232f5d}
+.uco-orders-count{color:#667790;font-size:.85rem;margin-bottom:.75rem}.uco-orders-list{display:grid;gap:.65rem}.uco-order-card{border:1px solid #dce4ee;border-radius:1rem 0 1rem 0;background:white;overflow:hidden}.uco-order-card summary{cursor:pointer;display:grid;grid-template-columns:.8fr 1.4fr 1fr .8fr 1fr 1fr;align-items:center;gap:.6rem;padding:1rem;color:#232f5d;list-style:none}.uco-order-card summary::-webkit-details-marker{display:none}.uco-order-card[open] summary{background:#f4f7fb}.uco-order-status,.uco-order-state{font-size:.77rem;font-weight:700}.uco-order-status{color:#47751a}.uco-order-state{color:#67768a}.uco-order-detail{padding:1rem;border-top:1px solid #e1e7ef}.uco-order-detail p{margin:.4rem 0 1rem}.uco-order-lines{display:grid;gap:.5rem}.uco-order-lines>div{display:grid;grid-template-columns:1fr auto auto;gap:1rem;border-bottom:1px solid #edf1f5;padding:.6rem 0;align-items:center}.uco-order-lines small{display:block;color:#718099}.uco-order-notice{font-size:.8rem;color:#62748c}.uco-order-empty{padding:1.2rem;color:#62748c}
+@media(max-width:60rem){.uco-order-card summary{grid-template-columns:1fr 1fr 1fr}.uco-orders-filters{grid-template-columns:1fr 1fr}.uco-orders-filters label:first-child{grid-column:1/-1}}
+@media(max-width:36rem){.uco-orders-intro{text-align:center}.uco-orders-filters{grid-template-columns:1fr}.uco-orders-filters label:first-child{grid-column:auto}.uco-order-card summary{grid-template-columns:1fr 1fr;gap:.6rem}.uco-order-card summary>*:nth-child(even){text-align:right}.uco-order-lines>div{grid-template-columns:1fr auto}.uco-order-lines>div strong{grid-column:2}}
+
+/* Fase 2B: cabecera centrada y próxima a las pestañas, en todas las resoluciones. */
+#orders-area.uco-orders .uco-orders-intro{margin:.45rem auto 1.1rem;text-align:center}
+#orders-area.uco-orders .uco-orders-intro>div{width:100%;max-width:100%;text-align:center}
+#orders-area.uco-orders .uco-orders-intro .eyebrow{display:block;font-size:clamp(.78rem,1vw,.95rem);font-weight:800;letter-spacing:.11em}
+#orders-area.uco-orders .uco-orders-intro h1{font-size:clamp(2rem,4vw,3.5rem);line-height:1.12;text-align:center;margin:.5rem 0 .75rem}
+#orders-area.uco-orders .uco-orders-intro p{max-width:60rem;margin:0 auto;text-align:center}
+@media(max-width:36rem){#orders-area.uco-orders .uco-orders-intro{margin:.35rem auto .85rem}#orders-area.uco-orders .uco-orders-intro h1{font-size:clamp(1.85rem,8vw,2.5rem)}}
+
+/* Ajuste de cortes del subtítulo de Pedidos en pantallas estrechas. */
+@media(max-width:36rem){#orders-area.uco-orders .uco-orders-intro p{max-width:29ch;margin-inline:auto;text-align:center;text-wrap:balance;line-height:1.5}}
+
+/* Fase 2C: controles de estado operativos */
+.uco-order-actions{display:flex;gap:.8rem;align-items:end;justify-content:flex-end;flex-wrap:wrap;margin-top:1rem}
+.uco-order-actions label{display:grid;gap:.3rem;font-size:.8rem;font-weight:700;color:#232f5d}
+.uco-order-actions select{border:1px solid #cdd8e7;border-radius:.5rem;padding:.65rem;min-width:12rem;background:#fff}
+.uco-order-actions button{background:#a9df39;color:#232f5d;border:0;border-radius:.7rem 0 .7rem 0;padding:.8rem 1rem;font-weight:800;cursor:pointer}
+.uco-order-actions button:disabled{opacity:.5;cursor:default}
+@media(max-width:36rem){.uco-order-actions,.uco-order-actions label,.uco-order-actions select,.uco-order-actions button{width:100%}}
+
+/* UCO: confirmaciones propias, escritorio y móvil */
+dialog.uco-order-dialog{position:fixed;inset:0;margin:auto;padding:0;width:min(92vw,35rem);max-width:92vw;max-height:90dvh;overflow:auto;border:0;border-radius:1.1rem 0 1.1rem 0;background:#fff;color:#232f5d;box-shadow:0 1.5rem 5rem #0a193555}
+dialog.uco-order-dialog::backdrop{background:#07132ab8;backdrop-filter:blur(3px)}
+.uco-order-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:#232f5d;color:#fff;padding:1.15rem 1.35rem}
+.uco-order-dialog-head h2{font-size:clamp(1.15rem,3vw,1.45rem);margin:0;color:#fff}
+.uco-order-x{border:0;background:#a9df39;color:#232f5d;width:2.2rem;height:2.2rem;border-radius:.5rem 0 .5rem 0;font-size:1.4rem;cursor:pointer}
+.uco-order-dialog-body{padding:1.4rem;display:grid;gap:1rem}
+.uco-order-dialog-body p{margin:0;line-height:1.55}
+.uco-order-dialog-body label{display:grid;gap:.45rem;font-weight:700;font-size:.88rem}
+.uco-order-dialog-body textarea,.uco-order-dialog-body input{width:100%;min-width:0;box-sizing:border-box;border:1px solid #ccd8e6;border-radius:.65rem;padding:.8rem;font:inherit;color:#232f5d}
+.uco-order-dialog-body small{color:#60738b;line-height:1.45}
+.uco-order-dialog-actions{display:flex;justify-content:flex-end;gap:.65rem;flex-wrap:wrap}
+.uco-order-dialog-actions button{border-radius:.7rem 0 .7rem 0;padding:.8rem 1rem;font-weight:800;cursor:pointer}
+.uco-order-cancel{background:#fff;border:1px solid #b9c8d8;color:#232f5d}
+.uco-order-confirm{background:#a9df39;border:1px solid #a9df39;color:#232f5d}
+.uco-order-actions .uco-order-reset{background:transparent;color:#527c19;border:1px solid #8abf2b}
+@media(max-width:36rem){dialog.uco-order-dialog{width:calc(100vw - 1.5rem);max-width:calc(100vw - 1.5rem)}.uco-order-dialog-body{padding:1rem}.uco-order-dialog-actions{display:grid;grid-template-columns:1fr 1fr}.uco-order-dialog-actions:has(> :only-child){grid-template-columns:1fr}.uco-order-dialog-actions button{min-width:0}}
+
+/* Fase 2G: historial de preparación y reinicios auditados */
+.uco-order-history{margin:1.1rem 0;padding:1rem 1.15rem;background:#f7f9fd;border:1px solid #dce4ef;border-radius:.85rem 0 .85rem 0}
+.uco-order-history h3{font-size:1.04rem;color:#232f5d;margin:0 0 .9rem;font-weight:800}
+.uco-order-history ol{list-style:none;margin:0;padding:0 0 0 .9rem;border-left:2px solid #a9df39;display:grid;gap:.9rem}
+.uco-order-history li{position:relative;padding:.2rem .15rem .2rem .9rem;color:#283a61}
+.uco-order-history li::before{content:'';position:absolute;left:-1.28rem;top:.45rem;width:.62rem;height:.62rem;border-radius:50%;background:#a9df39;border:2px solid #fff;box-shadow:0 0 0 1px #8caf40}
+.uco-order-history li.uco-history-reset::before{background:#232f5d;box-shadow:0 0 0 1px #232f5d}
+.uco-history-top{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;flex-wrap:wrap}
+.uco-history-top time,.uco-order-history small{font-size:.79rem;color:#64748b}
+.uco-order-history li p{margin:.25rem 0;font-size:.9rem}
+.uco-order-history .uco-history-note{background:#fff;border-left:3px solid #a9df39;padding:.55rem .7rem;border-radius:0 .45rem .45rem 0;overflow-wrap:anywhere}
+@media(max-width:36rem){.uco-order-history{padding:.9rem .75rem}.uco-history-top{flex-direction:column;gap:.2rem}}
+
+/* Confirmación propia UCO tras cambiar la contraseña */
+dialog.uco-password-success{position:fixed;inset:0;margin:auto;width:min(92vw,29rem);max-width:92vw;max-height:90dvh;overflow:auto;padding:0;border:0;border-radius:1.1rem 0 1.1rem 0;background:#fff;color:#232f5d;box-shadow:0 1.5rem 5rem #0a193555}
+dialog.uco-password-success::backdrop{background:#07132ab8;backdrop-filter:blur(3px)}
+.uco-password-success-head{display:flex;align-items:center;gap:.85rem;padding:1.25rem 1.4rem;background:#232f5d;color:#fff}
+.uco-password-success-head h2{margin:0;color:#fff;font-size:clamp(1.2rem,3vw,1.5rem);line-height:1.25}
+.uco-password-success-icon{display:grid;place-items:center;flex:0 0 2.3rem;width:2.3rem;height:2.3rem;border-radius:.65rem 0 .65rem 0;background:#a9df39;color:#232f5d;font-weight:900;font-size:1.3rem}
+.uco-password-success-body{padding:1.4rem;display:grid;gap:1.4rem}
+.uco-password-success-body p{margin:0;line-height:1.55;color:#33486c;text-align:center;text-wrap:balance}
+.uco-password-success-actions{display:flex;justify-content:flex-end}
+.uco-password-success-actions button{min-width:8.5rem;border:0;border-radius:.75rem 0 .75rem 0;background:#a9df39;color:#232f5d;padding:.8rem 1.2rem;font-weight:800;cursor:pointer}
+.uco-password-success-actions button:focus-visible{outline:3px solid #232f5d;outline-offset:3px}
+@media(max-width:36rem){dialog.uco-password-success{width:calc(100vw - 1.5rem);max-width:calc(100vw - 1.5rem)}.uco-password-success-head{padding:1rem}.uco-password-success-body{padding:1rem}.uco-password-success-actions button{width:100%}}
+
+/* Fase 3A: navegación interna de Pedidos, alineada con la identidad UCO. */
+#orders-area .uco-orders-subtabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin:0 0 .8rem}
+#orders-area .uco-orders-subtabs button{min-width:0;min-height:3.15rem;padding:.75rem .55rem;background:#fff;border:1px solid #b9cbe0;border-radius:.9rem 0 .9rem 0;color:#232f5d;font:inherit;font-size:.9rem;font-weight:800;cursor:pointer;transition:background .15s ease}
+#orders-area .uco-orders-subtabs button:hover{background:#f1f7e5}
+#orders-area .uco-orders-subtabs button[aria-selected="true"]{background:#a9df39;border-color:#a9df39;color:#18294d}
+#orders-area .uco-orders-subtabs button:focus-visible{outline:3px solid #6b9f21;outline-offset:2px}
+#orders-area .uco-orders-panels>[hidden]{display:none!important}
+#orders-area .uco-orders-workspace{padding:clamp(1.1rem,2.5vw,2rem)}
+#orders-area .uco-orders-workspace h2{margin:0 0 .6rem;font-size:clamp(1.3rem,2.2vw,1.8rem);color:#232f5d;text-align:center}
+#orders-area .uco-orders-workspace>p{margin:0 auto 1.35rem;max-width:55rem;color:#61748e;text-align:center;text-wrap:balance;line-height:1.5}
+#orders-area .uco-orders-work-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;border:1px solid #dce4ee;border-radius:.85rem 0 .85rem 0;padding:1rem;margin:.6rem 0;background:#fff}
+#orders-area .uco-orders-work-row>div{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1rem;min-width:0}
+#orders-area .uco-orders-work-row strong{color:#232f5d}
+#orders-area .uco-orders-work-row span{color:#32476b}
+#orders-area .uco-orders-work-row small{color:#6b7e96}
+#orders-area .uco-orders-work-row button{border:0;border-radius:.7rem 0 .7rem 0;background:#a9df39;color:#232f5d;padding:.7rem 1rem;font-weight:800;cursor:pointer;white-space:nowrap}
+#orders-area .uco-orders-work-empty{padding:1.25rem;text-align:center;color:#6b7e96}
+@media(max-width:48rem){#orders-area .uco-orders-subtabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}#orders-area .uco-orders-subtabs button{font-size:.84rem;min-height:3rem}}
+@media(max-width:30rem){#orders-area .uco-orders-work-row{align-items:stretch;flex-direction:column}#orders-area .uco-orders-work-row button{width:100%}}
+
+/* Restauración del estilo original del justificante PDF (Fase 3A) */
+#orders-area .uco-order-meta{display:flex;align-items:center;justify-content:space-between;gap:.85rem 1.25rem;margin-bottom:.9rem}
+#orders-area .uco-order-meta p{flex:1 1 auto;min-width:0;margin:0}
+#orders-area .uco-order-receipt-button{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-height:2.65rem;padding:.7rem 1.15rem;background:#a9df39;color:#232f5d;border:0;border-radius:.75rem 0 .75rem 0;font:800 .86rem Manrope,sans-serif;cursor:pointer;text-align:center;transition:background .2s ease}
+#orders-area .uco-order-receipt-button:hover{background:#97cb29}
+#orders-area .uco-order-receipt-button:focus-visible{outline:2px solid #232f5d;outline-offset:3px}
+#orders-area .uco-order-receipt-button:disabled{opacity:.65;cursor:wait}
+@media(max-width:60rem){#orders-area .uco-order-meta{flex-direction:column;align-items:stretch;gap:.7rem;margin-bottom:1rem}#orders-area .uco-order-receipt-button{align-self:flex-start;min-height:2.85rem}}
+@media(max-width:36rem){#orders-area .uco-order-meta{gap:.65rem}#orders-area .uco-order-receipt-button{align-self:stretch;width:100%}}
+
+/* Fase 3B: cola de preparación, sin alterar la navegación ni las operaciones existentes. */
+#orders-area .uco-orders-prep-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin:0 0 1.25rem}
+#orders-area .uco-prep-stat{display:grid;gap:.2rem;text-align:center;padding:1rem .45rem;background:#f4f8ed;border:1px solid #dbe9c3;border-radius:.85rem 0 .85rem 0}
+#orders-area .uco-prep-stat strong{font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.15;color:#232f5d}
+#orders-area .uco-prep-stat span{font-size:.8rem;color:#516780;font-weight:700}
+#orders-area .uco-orders-prep-filters{display:grid;grid-template-columns:2fr 1fr;gap:.8rem;margin-bottom:1rem}
+#orders-area .uco-orders-prep-filters label{display:grid;gap:.4rem;font-size:.8rem;font-weight:800;color:#232f5d}
+#orders-area .uco-orders-prep-filters input,#orders-area .uco-orders-prep-filters select{width:100%;min-width:0;padding:.8rem;border:1px solid #cbd8e8;border-radius:.7rem 0 .7rem 0;background:#fff;color:#232f5d;font:inherit}
+#orders-area .uco-prep-card{padding:1rem 1.15rem;margin:.6rem 0;border:1px solid #dce4ee;border-radius:.9rem 0 .9rem 0;background:#fff}
+#orders-area .uco-prep-card-main{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem 1rem}
+#orders-area .uco-prep-card-main strong{color:#232f5d}
+#orders-area .uco-prep-card-main span{color:#32476b}
+#orders-area .uco-prep-card-main small{color:#708199}
+#orders-area .uco-prep-state{margin-left:auto;padding:.35rem .65rem;background:#f1f7e5;border-radius:.5rem 0 .5rem 0;color:#4c7625!important;font-size:.8rem;font-weight:800}
+#orders-area .uco-prep-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-top:.8rem;padding-top:.8rem;border-top:1px solid #e5ebf2;color:#61748e;font-size:.85rem}
+#orders-area .uco-prep-card-bottom button{padding:.7rem 1rem;border:0;border-radius:.7rem 0 .7rem 0;background:#a9df39;color:#232f5d;font:inherit;font-weight:800;cursor:pointer}
+@media(max-width:48rem){#orders-area .uco-orders-prep-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:30rem){#orders-area .uco-orders-prep-filters{grid-template-columns:1fr}#orders-area .uco-prep-card-bottom{flex-direction:column;align-items:stretch}#orders-area .uco-prep-card-bottom button{width:100%}#orders-area .uco-prep-state{margin-left:0}}
+
+/* Fase 3C.1: responsable de preparación */
+#orders-area .uco-order-assign{display:flex;align-items:end;gap:1rem;flex-wrap:wrap;justify-content:space-between;padding:1.1rem 0;border-top:1px solid #dce4ee;margin-top:1rem}
+#orders-area .uco-order-assign>div{display:grid;gap:.3rem;color:#232f5d}
+#orders-area .uco-order-assign small,#orders-area .uco-prep-assigned{font-size:.82rem;color:#62748b}
+#orders-area .uco-order-assign label{display:grid;gap:.3rem;font-weight:700;font-size:.8rem;color:#232f5d;min-width:min(100%,14rem)}
+#orders-area .uco-order-assign select{border:1px solid #cad6e5;border-radius:.65rem;padding:.7rem;background:white;color:#232f5d}
+#orders-area .uco-order-assign button{border:0;border-radius:.7rem 0 .7rem 0;background:#a9df39;color:#232f5d;padding:.8rem 1.1rem;font-weight:800;cursor:pointer}
+#orders-area .uco-order-assign button:disabled{opacity:.5}
+@media(max-width:48rem){#orders-area .uco-order-assign{display:grid;gap:.85rem}#orders-area .uco-order-assign label,#orders-area .uco-order-assign button{width:100%}}
