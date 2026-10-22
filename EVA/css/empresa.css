@@ -1,0 +1,316 @@
+.company-page {
+  background-color: var(--cream-hero);
+}
+
+.company-page header {
+  background-color: var(--cream-hero);
+}
+
+.company {
+  --gutter: max(5%, calc((100% - 80rem) / 2));
+  padding: 10rem 0 0;
+}
+
+.company h1, .company h2, .company h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+}
+
+.company h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+}
+
+.company h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.company .eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.company-link {
+  border-bottom: 0.08rem solid currentColor;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+
+.company-link:hover {
+  color: hsl(224, 52%, 40%);
+}
+
+.company a:focus-visible {
+  outline: 0.15rem solid currentColor;
+  outline-offset: 0.3rem;
+}
+
+.company-intro {
+  align-items: center;
+  display: flex;
+  gap: 4rem;
+  padding: 3rem 0 5rem;
+  padding-left: 8%;
+  padding-right: var(--gutter);
+}
+
+.company-text {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.company-text .company-lead {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  max-width: 36rem;
+}
+
+.company-photo {
+  position: relative;
+  width: 52%;
+}
+
+.company-photo img {
+  border-radius: 1.5rem;
+  box-shadow: -1rem 1rem 0 var(--navy-soft);
+  display: block;
+  height: 28rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.company-stamp {
+  background-color: var(--navy);
+  border-radius: 1rem;
+  bottom: 2.5rem;
+  color: var(--cream-hero);
+  display: grid;
+  gap: 0.125rem;
+  left: -1.5rem;
+  padding: 0.875rem 1.25rem;
+  position: absolute;
+}
+
+.company-stamp strong {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.company-stamp span {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.company-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 0;
+  padding-inline: var(--gutter);
+}
+
+.company-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.company-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+}
+
+.company-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.company-card-media {
+  aspect-ratio: 4 / 3;
+  background-color: hsla(224, 45%, 80%, 0.35);
+  border-radius: 1.25rem;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  width: 100%;
+}
+
+.company-card-media img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.company-card-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16rem;
+}
+
+.company-card h3 {
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.company-card p:last-child {
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.company-clients {
+  background-color: var(--cream);
+  border-bottom: 0.0625rem solid hsla(224, 52%, 25%, 0.15);
+  border-top: 0.0625rem solid hsla(224, 52%, 25%, 0.15);
+}
+
+.company-chips {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  list-style: none;
+}
+
+.company-chips li {
+  align-items: center;
+  background-color: hsl(42, 60%, 97%);
+  border: 0.0625rem solid hsla(224, 52%, 25%, 0.15);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  gap: 0.75rem;
+  line-height: 1.25;
+  padding: 1.25rem 0.5rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.company-chips li:hover {
+  transform: translateY(-0.1875rem);
+}
+
+.company-chips span {
+  background-color: hsla(224, 45%, 80%, 0.28);
+  border-radius: 50%;
+  display: grid;
+  height: 3rem;
+  place-items: center;
+  width: 3rem;
+}
+
+.company-chips svg {
+  display: block;
+  fill: none;
+  height: 1.5rem;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+  width: 1.5rem;
+}
+
+.company-values {
+  align-items: center;
+  background-color: hsl(224, 45%, 90%);
+  color: var(--navy);
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1.1fr 1fr;
+  padding: 5rem var(--gutter);
+  text-align: left;
+}
+
+.company-values h2 {
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+}
+
+.company-values h2 span {
+  color: hsl(224, 35%, 40%);
+}
+
+.company-values ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 2rem 0 0;
+}
+
+.company-values li {
+  align-items: center;
+  border: 0.0625rem solid hsla(224, 52%, 25%, 0.3);
+  border-radius: 10rem;
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 500;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+}
+
+.company-values li::before {
+  background-color: var(--navy);
+  border-radius: 50%;
+  content: "";
+  height: 0.4375rem;
+  width: 0.4375rem;
+}
+
+.company-islands {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.company-islands img {
+  border-radius: 1.25rem;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.company-islands p {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.company-contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 0 var(--gutter);
+  text-align: center;
+}
+
+.company-contact h2 {
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+}
+
+.company-contact a {
+  background-color: var(--navy);
+  border-radius: 2rem;
+  color: var(--cream-hero);
+  font-weight: 600;
+  padding: 1rem 2rem;
+}
+
+.company-contact a:hover {
+  background-color: hsl(224, 52%, 35%);
+}
